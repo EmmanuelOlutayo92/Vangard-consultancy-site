@@ -1,0 +1,366 @@
+:root {
+  color-scheme: dark;
+  --blue-900: #0b1f3b;
+  --blue-700: #123057;
+  --blue-500: #2a5b91;
+  --surface: #11284a;
+  --surface-2: #17355f;
+  --ink-900: #ffffff;
+  --ink-700: #ffffff;
+  --white: #ffffff;
+  --shadow: 0 24px 50px rgba(5, 15, 30, 0.45);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source Sans 3', system-ui, sans-serif;
+  color: var(--ink-900);
+  background: radial-gradient(circle at top, #15355f 0%, #0b1f3b 45%, #09162a 100%);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.page {
+  min-height: 100vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 6vw 0;
+  position: sticky;
+  top: 0;
+  backdrop-filter: blur(12px);
+  background: rgba(9, 22, 42, 0.85);
+  z-index: 10;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-logo {
+  width: 58px;
+  height: auto;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.brand-tag {
+  font-size: 0.85rem;
+  color: var(--ink-700);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border: 1px solid transparent;
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1e4a86;
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+}
+
+.btn-ghost {
+  background: transparent;
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--white);
+}
+
+.btn-outline {
+  border-color: rgba(255, 255, 255, 0.35);
+}
+
+main {
+  padding: 0 6vw 90px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 60px 0 40px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-family: 'Sora', sans-serif;
+  font-size: clamp(2.6rem, 3.6vw, 4rem);
+  margin: 12px 0 18px;
+  color: var(--white);
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--ink-700);
+  max-width: 540px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.75rem;
+  color: var(--ink-700);
+  font-weight: 600;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  margin: 28px 0;
+  flex-wrap: wrap;
+}
+
+.hero-highlights {
+  display: flex;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.metric {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.5rem;
+  color: var(--white);
+  display: block;
+}
+
+.metric-label {
+  color: var(--ink-700);
+  font-size: 0.95rem;
+}
+
+.hero-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.panel-card {
+  background: var(--surface);
+  padding: 24px;
+  border-radius: 24px;
+  box-shadow: var(--shadow);
+}
+
+.panel-card h3 {
+  font-family: 'Sora', sans-serif;
+  margin-top: 0;
+}
+
+.panel-card.subtle {
+  background: linear-gradient(140deg, #1b3f70, #0b1f3b);
+  color: white;
+}
+
+.panel-list {
+  padding-left: 18px;
+}
+
+.panel-quote {
+  font-size: 1.1rem;
+}
+
+.panel-client {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  opacity: 0.8;
+}
+
+.section-head {
+  margin-bottom: 28px;
+}
+
+section {
+  padding: 60px 0;
+  animation: fadeUp 900ms ease both;
+}
+
+.trust-grid,
+.service-grid,
+.industry-grid,
+.testimonial-grid,
+.contact-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.trust-card,
+.service-card,
+.industry,
+.testimonial-card,
+.contact-card,
+.contact-form {
+  background: var(--surface);
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: var(--shadow);
+}
+
+.service-card h3,
+.contact-card h3,
+.testimonial-card h4 {
+  font-family: 'Sora', sans-serif;
+}
+
+.industry {
+  font-weight: 600;
+  text-align: center;
+  background: var(--surface-2);
+}
+
+.process-steps {
+  display: grid;
+  gap: 16px;
+}
+
+.step {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  background: var(--surface-2);
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.step-num {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.4rem;
+  color: var(--ink-700);
+}
+
+.testimonial-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: var(--ink-700);
+}
+
+.cta {
+  padding: 40px 0 20px;
+}
+
+.cta-card {
+  background: linear-gradient(140deg, #1e4a86, #0b1f3b);
+  color: var(--white);
+  padding: 32px;
+  border-radius: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(9, 22, 42, 0.6);
+  color: var(--white);
+  padding: 12px 14px;
+  font-family: 'Source Sans 3', sans-serif;
+  font-size: 1rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  color: var(--ink-700);
+}
+
+.footer {
+  padding: 40px 6vw 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+  background: rgba(9, 22, 42, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+  }
+
+  .hero {
+    padding-top: 30px;
+  }
+
+  .cta-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
