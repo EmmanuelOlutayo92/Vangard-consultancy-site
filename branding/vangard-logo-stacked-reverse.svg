@@ -1,0 +1,9 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#0B1F3B"/>
+  <g fill="#FFFFFF">
+    <polygon points="240,140 310,140 400,360 360,360"/>
+    <polygon points="490,140 560,140 440,360 400,360"/>
+  </g>
+  <text x="400" y="520" text-anchor="middle" font-family="Montserrat, Manrope, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="6" fill="#FFFFFF">VANGARD</text>
+  <text x="400" y="590" text-anchor="middle" font-family="Montserrat, Manrope, Arial, sans-serif" font-size="28" font-weight="500" letter-spacing="8" fill="#FFFFFF">CONSULTANCY</text>
+</svg>
