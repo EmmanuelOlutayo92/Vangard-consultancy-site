@@ -17,20 +17,29 @@
           <span>Lagos • London • Remote</span>
         </div>
       </div>
-      <form class="contact-form">
+      <form
+        class="contact-form"
+        action="mailto:info@vangardconsultancy.com"
+        method="post"
+        enctype="text/plain"
+      >
         <label>
           Full name
-          <input type="text" placeholder="Your name" />
+          <input type="text" name="name" placeholder="Your name" />
         </label>
         <label>
           Work email
-          <input type="email" placeholder="you@company.com" />
+          <input type="email" name="email" placeholder="you@company.com" />
         </label>
         <label>
           What are you working on?
-          <textarea rows="4" placeholder="Briefly describe your goals"></textarea>
+          <textarea
+            name="message"
+            rows="4"
+            placeholder="Briefly describe your goals"
+          ></textarea>
         </label>
-        <button class="btn btn-primary" type="button">Send message</button>
+        <button class="btn btn-primary" type="submit">Send message</button>
       </form>
     </div>
   </section>
