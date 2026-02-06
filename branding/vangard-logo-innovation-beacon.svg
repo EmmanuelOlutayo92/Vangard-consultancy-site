@@ -1,0 +1,20 @@
+<svg width="1000" height="900" viewBox="0 0 1000 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="900" fill="#0B1F3B"/>
+  <g stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round" fill="none">
+    <circle cx="280" cy="300" r="150"/>
+    <path d="M190 190 L280 510 L370 190"/>
+    <path d="M280 150 L280 110"/>
+    <path d="M280 490 L280 530"/>
+    <path d="M130 300 L90 300"/>
+    <path d="M470 300 L510 300"/>
+  </g>
+  <g stroke="#2A5B91" stroke-width="6" stroke-linecap="round" opacity="0.7">
+    <path d="M280 80 L280 40"/>
+    <path d="M280 560 L280 600"/>
+    <path d="M40 300 L0 300"/>
+    <path d="M520 300 L560 300"/>
+  </g>
+  <text x="560" y="340" font-family="Sora, Manrope, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="6" fill="#FFFFFF">VANGARD</text>
+  <text x="560" y="410" font-family="Source Sans 3, Manrope, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="8" fill="#C9D6EA">CONSULTANCY</text>
+  <text x="560" y="475" font-family="Source Sans 3, Manrope, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="3" fill="#9FB4D5">INNOVATION • ARCHITECTURE • SOLUTIONS</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" fill="#FFFFFF"/>
+  <g stroke="#0B1F3B" stroke-width="18" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="400" cy="250" r="140"/>
+    <path d="M310 160 L400 360 L490 160"/>
+    <path d="M400 120 L400 105"/>
+    <path d="M400 395 L400 410"/>
+    <path d="M260 250 L245 250"/>
+    <path d="M555 250 L540 250"/>
+  </g>
+  <text x="400" y="560" text-anchor="middle" font-family="Sora, Manrope, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="6" fill="#0B1F3B">VANGARD</text>
+  <text x="400" y="630" text-anchor="middle" font-family="Source Sans 3, Manrope, Arial, sans-serif" font-size="28" font-weight="500" letter-spacing="8" fill="#0B1F3B">CONSULTANCY</text>
+</svg>

@@ -1,12 +1,11 @@
 <svg width="900" height="1000" viewBox="0 0 900 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="900" height="1000" fill="none"/>
+  <rect width="900" height="1000" fill="#0B1F3B"/>
   <g stroke="#FFFFFF" stroke-width="18" stroke-linecap="round" stroke-linejoin="round" fill="none">
-    <circle cx="450" cy="300" r="170"/>
-    <path d="M450 120 L450 90"/>
-    <path d="M450 510 L450 540"/>
-    <path d="M270 300 L240 300"/>
-    <path d="M630 300 L660 300"/>
-    <path d="M360 200 L450 470 L540 200"/>
+    <path d="M330 210 L450 520 L570 210"/>
+    <path d="M390 520 L450 520 L510 520"/>
+    <path d="M360 560 L540 560"/>
+    <path d="M380 260 L450 260 L520 260"/>
+    <path d="M400 300 L500 300"/>
   </g>
   <text x="450" y="840" text-anchor="middle" font-family="Sora, Manrope, Arial, sans-serif" font-size="58" font-weight="700" letter-spacing="6" fill="#FFFFFF">VANGARD</text>
   <text x="450" y="905" text-anchor="middle" font-family="Source Sans 3, Manrope, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="8" fill="#FFFFFF">CONSULTANCY</text>

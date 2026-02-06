@@ -1,0 +1,25 @@
+<svg width="1000" height="900" viewBox="0 0 1000 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1000" height="900" fill="#0B1F3B"/>
+  <g stroke="#2A5B91" stroke-width="2" opacity="0.35">
+    <path d="M120 140 H520"/>
+    <path d="M120 220 H520"/>
+    <path d="M120 300 H520"/>
+    <path d="M120 380 H520"/>
+    <path d="M120 460 H520"/>
+    <path d="M120 540 H520"/>
+    <path d="M120 620 H520"/>
+    <path d="M200 100 V660"/>
+    <path d="M320 100 V660"/>
+    <path d="M440 100 V660"/>
+  </g>
+  <g stroke="#FFFFFF" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M160 140 L320 620 L480 140"/>
+    <path d="M200 220 L320 500 L440 220" opacity="0.6"/>
+    <circle cx="320" cy="140" r="14" fill="#FFFFFF"/>
+    <circle cx="160" cy="140" r="8" fill="#FFFFFF"/>
+    <circle cx="480" cy="140" r="8" fill="#FFFFFF"/>
+  </g>
+  <text x="620" y="360" font-family="Sora, Manrope, Arial, sans-serif" font-size="64" font-weight="700" letter-spacing="6" fill="#FFFFFF">VANGARD</text>
+  <text x="620" y="430" font-family="Source Sans 3, Manrope, Arial, sans-serif" font-size="26" font-weight="500" letter-spacing="8" fill="#C9D6EA">CONSULTANCY</text>
+  <text x="620" y="495" font-family="Source Sans 3, Manrope, Arial, sans-serif" font-size="18" font-weight="500" letter-spacing="3" fill="#9FB4D5">SOLUTION CREATION • MANAGEMENT • INNOVATION</text>
+</svg>

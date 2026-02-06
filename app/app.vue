@@ -262,16 +262,16 @@
 
 <style>
 :root {
-  color-scheme: light;
+  color-scheme: dark;
   --blue-900: #0b1f3b;
   --blue-700: #123057;
-  --blue-500: #205082;
-  --sand-100: #f6f4f1;
-  --ice-100: #eef2f7;
-  --ink-900: #0e0f14;
-  --ink-700: #222833;
+  --blue-500: #2a5b91;
+  --surface: #11284a;
+  --surface-2: #17355f;
+  --ink-900: #ffffff;
+  --ink-700: #ffffff;
   --white: #ffffff;
-  --shadow: 0 24px 50px rgba(11, 31, 59, 0.12);
+  --shadow: 0 24px 50px rgba(5, 15, 30, 0.45);
 }
 
 * {
@@ -282,7 +282,7 @@ body {
   margin: 0;
   font-family: 'Source Sans 3', system-ui, sans-serif;
   color: var(--ink-900);
-  background: radial-gradient(circle at top, #f7f9fc 0%, #edf2f8 45%, #f6f4f1 100%);
+  background: radial-gradient(circle at top, #15355f 0%, #0b1f3b 45%, #09162a 100%);
 }
 
 a {
@@ -302,7 +302,7 @@ a {
   position: sticky;
   top: 0;
   backdrop-filter: blur(12px);
-  background: rgba(246, 244, 241, 0.85);
+  background: rgba(9, 22, 42, 0.85);
   z-index: 10;
 }
 
@@ -330,7 +330,7 @@ a {
 
 .brand-tag {
   font-size: 0.85rem;
-  color: var(--blue-500);
+  color: var(--ink-700);
   text-transform: uppercase;
   letter-spacing: 0.28em;
 }
@@ -357,7 +357,7 @@ a {
 }
 
 .btn-primary {
-  background: var(--blue-900);
+  background: #1e4a86;
   color: var(--white);
   box-shadow: var(--shadow);
 }
@@ -368,11 +368,12 @@ a {
 
 .btn-ghost {
   background: transparent;
-  border-color: rgba(11, 31, 59, 0.2);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: var(--white);
 }
 
 .btn-outline {
-  border-color: rgba(11, 31, 59, 0.35);
+  border-color: rgba(255, 255, 255, 0.35);
 }
 
 main {
@@ -391,7 +392,7 @@ main {
   font-family: 'Sora', sans-serif;
   font-size: clamp(2.6rem, 3.6vw, 4rem);
   margin: 12px 0 18px;
-  color: var(--blue-900);
+  color: var(--white);
 }
 
 .lead {
@@ -404,7 +405,7 @@ main {
   text-transform: uppercase;
   letter-spacing: 0.3em;
   font-size: 0.75rem;
-  color: var(--blue-500);
+  color: var(--ink-700);
   font-weight: 600;
 }
 
@@ -424,7 +425,7 @@ main {
 .metric {
   font-family: 'Sora', sans-serif;
   font-size: 1.5rem;
-  color: var(--blue-900);
+  color: var(--white);
   display: block;
 }
 
@@ -439,7 +440,7 @@ main {
 }
 
 .panel-card {
-  background: var(--white);
+  background: var(--surface);
   padding: 24px;
   border-radius: 24px;
   box-shadow: var(--shadow);
@@ -451,7 +452,7 @@ main {
 }
 
 .panel-card.subtle {
-  background: linear-gradient(140deg, #0b1f3b, #123057);
+  background: linear-gradient(140deg, #1b3f70, #0b1f3b);
   color: white;
 }
 
@@ -496,7 +497,7 @@ section {
 .testimonial-card,
 .contact-card,
 .contact-form {
-  background: var(--white);
+  background: var(--surface);
   border-radius: 20px;
   padding: 24px;
   box-shadow: var(--shadow);
@@ -511,6 +512,7 @@ section {
 .industry {
   font-weight: 600;
   text-align: center;
+  background: var(--surface-2);
 }
 
 .process-steps {
@@ -522,7 +524,7 @@ section {
   display: flex;
   gap: 16px;
   align-items: flex-start;
-  background: var(--white);
+  background: var(--surface-2);
   padding: 20px;
   border-radius: 16px;
   box-shadow: var(--shadow);
@@ -531,7 +533,7 @@ section {
 .step-num {
   font-family: 'Sora', sans-serif;
   font-size: 1.4rem;
-  color: var(--blue-500);
+  color: var(--ink-700);
 }
 
 .testimonial-meta {
@@ -548,7 +550,7 @@ section {
 }
 
 .cta-card {
-  background: linear-gradient(140deg, #0b1f3b, #1a3a6e);
+  background: linear-gradient(140deg, #1e4a86, #0b1f3b);
   color: var(--white);
   padding: 32px;
   border-radius: 28px;
@@ -568,7 +570,9 @@ section {
 .contact-form textarea {
   width: 100%;
   border-radius: 12px;
-  border: 1px solid #d3dbe6;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(9, 22, 42, 0.6);
+  color: var(--white);
   padding: 12px 14px;
   font-family: 'Source Sans 3', sans-serif;
   font-size: 1rem;
@@ -588,8 +592,8 @@ section {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 16px;
-  background: var(--white);
-  border-top: 1px solid rgba(11, 31, 59, 0.08);
+  background: rgba(9, 22, 42, 0.9);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 @keyframes fadeUp {
