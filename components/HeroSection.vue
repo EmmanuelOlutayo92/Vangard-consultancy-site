@@ -2,14 +2,12 @@
   <section class="hero" id="about">
     <div class="hero-content">
       <p class="eyebrow">Tech consultancy for clarity and momentum</p>
-      <h1>
-        Architecting innovation. Delivering impact.
-      </h1>
+      <h1>Architecting innovation. Delivering impact.</h1>
       <p class="lead">
-        Vangard Consultancy is a technology advisory firm focused on
-        solution design, software architecture, and modern systems. We help
-        organizations turn ideas into reliable products, automate critical
-        workflows, and build platforms that scale.
+        Vangard Consultancy is a technology advisory firm focused on solution
+        design, software architecture, and modern systems. We help organisations
+        turn ideas into reliable products, automate critical workflows, and
+        build platforms that scale.
       </p>
       <div class="hero-actions">
         <a href="#contact" class="btn btn-primary">Book a Consultation</a>
@@ -34,9 +32,8 @@
       <div class="panel-card">
         <h3>Founder Focus</h3>
         <p>
-          We partner directly with founders and leaders to design
-          architecture, build software, and automate systems that move the
-          business forward.
+          We partner directly with founders and leaders to design architecture,
+          build software, and automate systems that move your business forward.
         </p>
         <ul class="panel-list">
           <li>Solution design</li>
@@ -47,8 +44,8 @@
       </div>
       <div class="panel-card subtle">
         <p class="panel-quote">
-          “Vangard translated our ideas into a clear architecture and a
-          delivery plan we could execute immediately.”
+          “Vangard translated our ideas into a clear architecture and a delivery
+          plan we could execute immediately.”
         </p>
         <div class="panel-client">
           <span class="client-name">Founder</span>
