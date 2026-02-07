@@ -24,8 +24,8 @@ module.exports = async function (context, req) {
     const url = `${baseUrl}?code=${encodeURIComponent(code)}`
 
     const payload = {
-      toEmail: 'info@vangardconsultancy.com',
-      toName: 'Vangard Consultancy',
+      toEmail: 'emmanuelolutayo92@gmail.com',
+      toName: 'Emmanuel Olutayo',
       subject: `Website inquiry from ${name}`,
       htmlBody: `
         <h2>New Website Inquiry</h2>
