@@ -303,6 +303,13 @@ section {
   gap: 16px;
 }
 
+.form-status {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--white);
+  opacity: 0.85;
+}
+
 .contact-form input,
 .contact-form textarea {
   width: 100%;

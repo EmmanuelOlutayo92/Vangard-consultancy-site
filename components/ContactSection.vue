@@ -17,30 +17,76 @@
           <span>Lagos • London • Remote</span>
         </div>
       </div>
-      <form
-        class="contact-form"
-        action="mailto:info@vangardconsultancy.com"
-        method="post"
-        enctype="text/plain"
-      >
+      <form class="contact-form" @submit.prevent="submitForm">
         <label>
           Full name
-          <input type="text" name="name" placeholder="Your name" />
+          <input v-model="form.name" type="text" placeholder="Your name" required />
         </label>
         <label>
           Work email
-          <input type="email" name="email" placeholder="you@company.com" />
+          <input v-model="form.email" type="email" placeholder="you@company.com" required />
         </label>
         <label>
           What are you working on?
           <textarea
-            name="message"
+            v-model="form.message"
             rows="4"
             placeholder="Briefly describe your goals"
+            required
           ></textarea>
         </label>
-        <button class="btn btn-primary" type="submit">Send message</button>
+        <button class="btn btn-primary" type="submit" :disabled="isSending">
+          {{ isSending ? 'Sending…' : 'Send message' }}
+        </button>
+        <p v-if="statusMessage" class="form-status">{{ statusMessage }}</p>
       </form>
     </div>
   </section>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+
+const form = ref({
+  name: '',
+  email: '',
+  message: ''
+})
+
+const isSending = ref(false)
+const statusMessage = ref('')
+
+const submitForm = async () => {
+  if (isSending.value) return
+  isSending.value = true
+  statusMessage.value = ''
+
+  try {
+    const response = await fetch('/api/send-email', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+          toEmail: 'info@vangardconsultancy.com',
+          toName: 'Vangard Consultancy',
+          subject: `Website inquiry from ${form.value.name}`,
+          htmlBody: `<p><strong>Name:</strong> ${form.value.name}</p>
+                     <p><strong>Email:</strong> ${form.value.email}</p>
+                     <p><strong>Message:</strong><br/>${form.value.message}</p>`,
+          textBody: `Name: ${form.value.name}\nEmail: ${form.value.email}\nMessage: ${form.value.message}`
+        })
+      }
+    )
+
+    if (!response.ok) {
+      throw new Error('Request failed')
+    }
+
+    statusMessage.value = 'Thanks! Your message has been sent.'
+    form.value = { name: '', email: '', message: '' }
+  } catch (error) {
+    statusMessage.value = 'Sorry, something went wrong. Please try again.'
+  } finally {
+    isSending.value = false
+  }
+}
+</script>
