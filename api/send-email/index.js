@@ -1,11 +1,27 @@
 module.exports = async function (context, req) {
   try {
-    const { name, email, message } = req.body || {}
+    let body = req.body
+    if (!body && req.rawBody) {
+      try {
+        body = JSON.parse(req.rawBody)
+      } catch {
+        body = null
+      }
+    }
+    if (typeof body === 'string') {
+      try {
+        body = JSON.parse(body)
+      } catch {
+        body = null
+      }
+    }
+
+    const { name, email, message } = body || {}
 
     if (!name || !email || !message) {
       context.res = {
         status: 400,
-        body: { error: 'Missing required fields.' }
+        body: { error: 'Missing required fields.', received: body || null }
       }
       return
     }
