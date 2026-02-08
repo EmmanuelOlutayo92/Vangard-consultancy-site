@@ -66,16 +66,11 @@ const submitForm = async () => {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-          toEmail: 'info@vangardconsultancy.com',
-          toName: 'Vangard Consultancy',
-          subject: `Website inquiry from ${form.value.name}`,
-          htmlBody: `<p><strong>Name:</strong> ${form.value.name}</p>
-                     <p><strong>Email:</strong> ${form.value.email}</p>
-                     <p><strong>Message:</strong><br/>${form.value.message}</p>`,
-          textBody: `Name: ${form.value.name}\nEmail: ${form.value.email}\nMessage: ${form.value.message}`
-        })
-      }
-    )
+        name: form.value.name,
+        email: form.value.email,
+        message: form.value.message
+      })
+    })
 
     if (!response.ok) {
       throw new Error('Request failed')
