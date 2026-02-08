@@ -28,6 +28,7 @@ module.exports = async function (context, req) {
 
     const baseUrl = process.env.LOGIC_APP_URL
     const code = process.env.LOGIC_APP_CODE
+    const toEmail = process.env.LOGIC_APP_TO_EMAIL
 
     if (!baseUrl || !code) {
       context.res = {
@@ -40,8 +41,8 @@ module.exports = async function (context, req) {
     const url = `${baseUrl}?code=${encodeURIComponent(code)}`
 
     const payload = {
-      toEmail: 'emmanuelolutayo92@gmail.com',
-      toName: 'Emmanuel Olutayo',
+      toEmail: toEmail,
+      toName: 'Vangard Info',
       subject: `Website inquiry from ${name}`,
       htmlBody: `
         <h2>New Website Inquiry</h2>

@@ -13,18 +13,27 @@
         </p>
         <div class="contact-details">
           <span>info@vangardconsultancy.com</span>
-          <span>+1 (555) 012-2211</span>
-          <span>Lagos • London • Remote</span>
+          <span>United Kingdom</span>
         </div>
       </div>
       <form class="contact-form" @submit.prevent="submitForm">
         <label>
           Full name
-          <input v-model="form.name" type="text" placeholder="Your name" required />
+          <input
+            v-model="form.name"
+            type="text"
+            placeholder="Your name"
+            required
+          />
         </label>
         <label>
           Work email
-          <input v-model="form.email" type="email" placeholder="you@company.com" required />
+          <input
+            v-model="form.email"
+            type="email"
+            placeholder="you@company.com"
+            required
+          />
         </label>
         <label>
           What are you working on?
@@ -36,7 +45,7 @@
           ></textarea>
         </label>
         <button class="btn btn-primary" type="submit" :disabled="isSending">
-          {{ isSending ? 'Sending…' : 'Send message' }}
+          {{ isSending ? "Sending…" : "Send message" }}
         </button>
         <p v-if="statusMessage" class="form-status">{{ statusMessage }}</p>
       </form>
@@ -45,43 +54,43 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref } from "vue";
 
 const form = ref({
-  name: '',
-  email: '',
-  message: ''
-})
+  name: "",
+  email: "",
+  message: "",
+});
 
-const isSending = ref(false)
-const statusMessage = ref('')
+const isSending = ref(false);
+const statusMessage = ref("");
 
 const submitForm = async () => {
-  if (isSending.value) return
-  isSending.value = true
-  statusMessage.value = ''
+  if (isSending.value) return;
+  isSending.value = true;
+  statusMessage.value = "";
 
   try {
-    const response = await fetch('/api/send-email', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
+    const response = await fetch("/api/send-email", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: form.value.name,
         email: form.value.email,
-        message: form.value.message
-      })
-    })
+        message: form.value.message,
+      }),
+    });
 
     if (!response.ok) {
-      throw new Error('Request failed')
+      throw new Error("Request failed");
     }
 
-    statusMessage.value = 'Thanks! Your message has been sent.'
-    form.value = { name: '', email: '', message: '' }
+    statusMessage.value = "Thanks! Your message has been sent.";
+    form.value = { name: "", email: "", message: "" };
   } catch (error) {
-    statusMessage.value = 'Sorry, something went wrong. Please try again.'
+    statusMessage.value = "Sorry, something went wrong. Please try again.";
   } finally {
-    isSending.value = false
+    isSending.value = false;
   }
-}
+};
 </script>
